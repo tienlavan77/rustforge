@@ -15,7 +15,7 @@ dotenvy = "0.15"
 sqlx = {
     version = "0.8",
     default-features = false,
-    features = ["runtime-tokio-rustls", "mysql", "migrate",  "macros"]
+    features = ["runtime-tokio-rustls", "mysql", "migrate",  "macros", "json"]
 }
 [dev-dependencies]
 tower = { version = "0.5", features = ["util"] }

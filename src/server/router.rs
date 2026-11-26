@@ -9,7 +9,7 @@ use axum::{
 
 use crate::{
     app_state::AppState,
-    modules::health,
+    modules::{health, appsettings},
     server::middleware::request_id::request_id_middleware,
 };
 
@@ -20,7 +20,7 @@ pub fn create_router(state: AppState) -> Router {
         // Health endpoint.
         // Endpoint kiểm tra trạng thái ứng dụng.
         .merge(health::routes())
-
+        .merge(appsettings::routes())
 
         // Apply request ID middleware.
         // Áp dụng middleware quản lý Request ID.
